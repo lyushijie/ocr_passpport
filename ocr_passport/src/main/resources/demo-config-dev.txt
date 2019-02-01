@@ -1,0 +1,13 @@
+# config
+jdbcUrl = jdbc:mysql://2338i726v4.iask.in:28656/ocr_passport?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull
+user = isi
+password = isi%2019
+devMode = true
+
+# 上传路径
+upload = upload
+
+旧版护照=e079d225d1d3fd3256daa209133fcd09
+新版护照=a8f5c06d0c7b5ac2e5d801e026d200a1
+大陆护照=chinese_passport
+国内护照=1

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="target">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ocr_passport/target/ocr_passport.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ocr_passport/target/ocr_passport-release.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

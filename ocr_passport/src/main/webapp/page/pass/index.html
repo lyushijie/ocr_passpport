@@ -1,0 +1,116 @@
+#@layout()
+#define main()
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="dashboard_graph">
+            <div class="row x_title">
+                <div class="col-md-6">
+                    <h3>港澳台通行证识别
+                        <small>照片尽量清晰，图片格式支持jpg/png/bmp</small>
+                    </h3>
+                </div>
+            </div>
+            <!--图片区域-->
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <div class="trial-img-container" style="width: 100%;">
+                    <!-- Upload image and data -->
+                    <div class="trial-img-upload">
+                        <div class="trial-img-upload-wrapper">
+                            <span class="ocr-img-upload-logo"><i class="fa fa-cloud-upload"></i></span>
+                            <button type="button" class="btn but-app ocr-img-upload-btn trial-img-upload-btn" onclick="fileSelect();">
+                                <span>点击选择图片</span></button>
+                            <div class="trial-img-upload-info ocr-img-upload-info">
+                                <div>图片大小不超过4M</div>
+                                <div>可以从微信、QQ、网页复制图片粘贴到此处</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trial-img-change" hidden>
+                        <div class="trial-img-wrapper">
+                            <img src="" id="img_passport" class="trial-img">
+                        </div>
+                    </div>
+                    <input id="fileToUpload" type="file" name="file" accept="image/jpg, image/png"
+                           style="display: none;">
+                    <input class="avatar-src" name="avatar_src" value="123" type="hidden">
+                </div>
+            </div>
+            <!--识别结果区域-->
+            <div class="col-md-7 col-sm-7 col-xs-12 bg-white">
+                <!--识别内容-->
+                <div class="col-md-12 col-sm-12 col-xs-6 bg-white">
+                    <div class="x_title">
+                        <h2 class="fields-zone-title">识别内容</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-6 form-horizontal form-label-left">
+                        <div class="item form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">姓名</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="ocr_name" required="required"
+                                       class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">性别</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="ocr_sex" required="required"
+                                       class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">出生日期</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="ocr_birth" required="required"
+                                       class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">有效期至</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="ocr_expiry" required="required"
+                                       class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">通行证号</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="ocr_id" required="required"
+                                       class="form-control col-md-7 col-xs-12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-6 bg-white">
+                    <!--一键生成格式-->
+                    <div class="x_title">
+                        <h2 class="fields-zone-title">生成格式</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-6 form-horizontal form-label-left">
+                        <div class="item form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">航司代码</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <input type="text" id="airline_code" required="required"
+                                       class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-12">
+                                <button type="submit" class="btn btn-primary" id="ocr_save" onclick="save_ocr()">生成
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12">格式代码</label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <textarea id="ocr_format" class="form-control" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<script src="javaScript/pass.js"></script>
+#end

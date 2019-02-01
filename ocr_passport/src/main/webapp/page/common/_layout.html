@@ -1,0 +1,83 @@
+#define layout()
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>LYU</title>
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/fonts/css/font-awesome.min.css" rel="stylesheet">
+	<link href="assets/css/animate.min.css" rel="stylesheet">
+	<link href="assets/css/custom.css" rel="stylesheet">
+	<link href="assets/css/loading.css" rel="stylesheet">
+	<link href="assets/toastr/toastr.min.css" rel="stylesheet" />
+
+	<script src="assets/js/jquery-1.4.4.min.js"></script>
+	<script src="assets/js/jquery.form.js"></script>
+	<script src="assets/js/vue.js"></script>
+	<script src="assets/toastr/toastr.min.js"></script>
+	<script src="assets/toastr/toastr.min.js"></script>
+
+</head>
+<body class="nav-md">
+<div class="loading"></div>
+<div class="container body">
+	<div class="main_container">
+		<!-- page content -->
+		<!-- top navigation -->
+		<div class="top_nav">
+			<div class="nav_menu">
+				<div class="applogo">
+					<a href="index.html" class="logo">LYU</a>
+				</div>
+				<ul class="nav navbar-nav ocr-nav-item">
+					<li class="">
+						<a href="/passport"> 护照识别</a>
+					</li>
+					<li class="">
+						<a href="/idcard"> 身份证识别</a>
+					</li>
+					<li class="">
+						<a href="/pass"> 通行证识别</a>
+					</li>
+				</ul>
+				<div class="appaccount">
+					<a href="javascript:;" class="" data-toggle="dropdown" aria-expanded="false">
+						shijie
+						<span class=" fa fa-angle-down"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- /top navigation -->
+		<div class="right_col" role="main">
+			#@main()
+
+			<!-- footer content -->
+			<footer>
+				<div>
+					<p class="text-center">© 2019 免责声明 本产品不存储原件信息，并且不对原件和识别信息保密。</p>
+				</div>
+			</footer>
+			<!-- /footer content -->
+		</div>
+		<!-- /page content -->
+	</div>
+</div>
+<script>
+    var GLOBAL_HTML_LOADING = ['<div id="loading-center">\n' +
+    '<div id="loading-center-absolute">\n' +
+    '<div class="object" id="object_one"></div>\n' +
+    '<div class="object" id="object_two"></div>\n' +
+    '<div class="object" id="object_three"></div>\n' +
+    '<div class="object" id="object_four"></div>\n' +
+    '</div>\n' +
+    '</div>'].join('');
+    $(".loading").html(GLOBAL_HTML_LOADING);
+</script>
+</body>
+</html>
+#end
